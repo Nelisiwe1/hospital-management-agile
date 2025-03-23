@@ -76,6 +76,5 @@
    - Challenge: Variability in development complexity across different user stories.
    - Solution: Used Fibonacci story points to improve estimation accuracy and task balancing.
 
-## 5. Submission
-**GitHub Repository URL:** [Insert Link Here]
+
 
