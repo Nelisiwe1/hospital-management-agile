@@ -6,6 +6,7 @@ The Hospital Management System (HMS) is designed to streamline hospital operatio
 ## **2. State Transition Diagrams**
 
 ### **2.1 Patient State Diagram**
+
 ```mermaid
 stateDiagram-v2
     [*] --> New
@@ -17,6 +18,7 @@ stateDiagram-v2
     Under_Treatment --> Admitted : Requires Further Treatment
 ```
 ### **2.2 Appointment State Diagram**
+
 ```mermaid
 stateDiagram-v2
     [*] --> Scheduled
@@ -27,6 +29,7 @@ stateDiagram-v2
     Completed --> [*]
 ```
 ### **2.3 Billing State Diagram**
+
 ```mermaid
 stateDiagram-v2
     [*] --> Generated
@@ -39,6 +42,7 @@ stateDiagram-v2
 ## **3. Activity Diagrams**
 
 ### **3.1 Patient Admission Workflow**
+
 ```mermaid
 activityDiagram-v2
     start
@@ -94,5 +98,5 @@ activityDiagram-v2
 ## **4. Conclusion**
 This assessment presents key UML diagrams to illustrate the state transitions and workflows in a Hospital Management System. These diagrams help visualize patient management, appointment scheduling, billing, and consultation processes, ensuring a clear understanding of system operations and improving hospital efficiency.
 
----
-**End of Assessment 8**
+
+
