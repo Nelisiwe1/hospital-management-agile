@@ -41,6 +41,47 @@ stateDiagram-v2
     Overdue --> Paid : Late Payment Received
     Paid --> [*]
 ```
+### **2.4 User Account State Transition Diagram**
+```mermaid
+stateDiagram-v2
+    [*] --> Registered
+    Registered --> Active : Email Verified
+    Active --> Suspended : Violated Policy
+    Suspended --> Active : Appeal Accepted
+    Active --> Deactivated : User Request
+    Deactivated --> [*]
+```
+### **2.5 Medical Record State Transition Diagram**
+```mermaid
+stateDiagram-v2
+    [*] --> Created
+    Created --> Updated : Add New Info
+    Updated --> Archived : Patient Discharged
+    Archived --> [*]
+
+```
+### **2.6 Prescription State Transition Diagram**
+```mermaid
+stateDiagram-v2
+    [*] --> Issued
+    Issued --> Dispensed : Pharmacy Confirms
+    Dispensed --> Expired : Validity Ends
+    Issued --> Expired : Not Collected
+    Expired --> [*]
+
+```
+### **2.7 Staff Schedule State Transition Diagram**
+```mermaid
+stateDiagram-v2
+    [*] --> Drafted
+    Drafted --> Approved : Supervisor Review
+    Approved --> Published : Posted to Staff
+    Published --> Modified : Staff Request Changes
+    Modified --> Approved
+    Approved --> [*]
+
+```
+
 
 ---
 
