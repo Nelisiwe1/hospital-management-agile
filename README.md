@@ -51,6 +51,14 @@
 | T-007 | Conduct system security testing | QA Team | 6 | To Do |
 | T-008 | Validate performance with 1000 concurrent users | Dev Team | 8 | To Do |
 
+## 4. Links
+[Check out the docs README](./docs/README.md)
+[Template_Analysis](template_analysis.md)
+[ReadmeKanban](ReadmeKanban.md)
+[Kanban_Explanation](kanban_explanation.md)
+[reflection](reflection.md)
+[Assessment8](Assessment8.md)
+
 ## 4. Reflection
 **Challenges Faced in Prioritization, Estimation, and Agile Alignment:**
 
