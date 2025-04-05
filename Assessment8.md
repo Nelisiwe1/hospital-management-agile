@@ -1,12 +1,14 @@
 # Assessment 8: Hospital Management System (HMS)
 
 ## **1. Introduction**
-The Hospital Management System (HMS) is designed to streamline hospital operations, ensuring efficient patient management, appointment scheduling, billing, and medical record maintenance. This assessment focuses on the key state transitions and workflows within the HMS, represented through UML diagrams.
+The Hospital Management System (HMS) is a software application designed to manage the day-to-day operations of a hospital. The system enables the effective and efficient management of hospital administrative tasks, patient care processes, appointment scheduling, billing, and reporting. This assessment provides UML diagrams, including state transition diagrams and activity diagrams, that demonstrate the dynamic behavior and workflows of the HMS.
+
+---
 
 ## **2. State Transition Diagrams**
+State transition diagrams show the life cycle of objects within the system. Below are the state transitions for patients, appointments, and billing processes.
 
-### **2.1 Patient State Diagram**
-
+### **2.1 Patient State Transition Diagram**
 ```mermaid
 stateDiagram-v2
     [*] --> New
@@ -17,8 +19,8 @@ stateDiagram-v2
     Admitted --> Discharged : Early Discharge
     Under_Treatment --> Admitted : Requires Further Treatment
 ```
-### **2.2 Appointment State Diagram**
 
+### **2.2 Appointment State Transition Diagram**
 ```mermaid
 stateDiagram-v2
     [*] --> Scheduled
@@ -28,8 +30,8 @@ stateDiagram-v2
     In_Progress --> Canceled : Doctor Unavailable
     Completed --> [*]
 ```
-### **2.3 Billing State Diagram**
 
+### **2.3 Billing State Transition Diagram**
 ```mermaid
 stateDiagram-v2
     [*] --> Generated
@@ -39,64 +41,70 @@ stateDiagram-v2
     Overdue --> Paid : Late Payment Received
     Paid --> [*]
 ```
+
+---
+
 ## **3. Activity Diagrams**
+Activity diagrams represent workflows of stepwise activities and actions. Below are key activity diagrams for the HMS.
 
 ### **3.1 Patient Admission Workflow**
-
 ```mermaid
-activityDiagram-v2
-    start
-    :Patient Arrives;
-    :Register at Reception;
-    decision Is Emergency?
-        Emergency --> [Yes] :Immediate Attention Required;
-        Emergency --> [No] :Proceed to Normal Admission;
-    :Assign Doctor;
-    :Doctor Evaluates Patient;
-    decision Requires Admission?
-        Requires Admission --> [Yes] :Allocate Bed & Ward;
-        Requires Admission --> [No] :Prescribe Medication & Discharge;
-    :Patient Under Treatment;
-    :Monitor Patient Progress;
-    decision Ready for Discharge?
-        Ready for Discharge --> [Yes] :Finalize Billing & Discharge;
-        Ready for Discharge --> [No] :Continue Treatment;
-    stop
+flowchart TD
+    A[Patient Arrives] --> B[Register at Reception]
+    B --> C{Is Emergency?}
+    C -- Yes --> D[Immediate Attention Required]
+    C -- No --> E[Proceed to Normal Admission]
+    D --> F[Assign Doctor]
+    E --> F
+    F --> G[Doctor Evaluates Patient]
+    G --> H{Requires Admission?}
+    H -- Yes --> I[Allocate Bed & Ward]
+    H -- No --> J[Prescribe Medication & Discharge]
+    I --> K[Patient Under Treatment]
+    K --> L[Monitor Patient Progress]
+    L --> M{Ready for Discharge?}
+    M -- Yes --> N[Finalize Billing & Discharge]
+    M -- No --> K
+    N --> O[End]
+    J --> O
 ```
 
 ### **3.2 Billing & Payment Workflow**
 ```mermaid
-activityDiagram-v2
-    start
-    :Generate Bill;
-    :Notify Patient of Due Amount;
-    decision Payment Done?
-        Payment Done --> [Yes] :Update Payment Status;
-        Payment Done --> [No] :Send Payment Reminder;
-    decision Overdue Payment?
-        Overdue Payment --> [Yes] :Apply Late Fee;
-        Overdue Payment --> [No] :Process Completion;
-    :Confirm Payment Received;
-    :Close Billing Case;
-    stop
+flowchart TD
+    A[Generate Bill] --> B[Notify Patient of Due Amount]
+    B --> C{Payment Done?}
+    C -- Yes --> D[Update Payment Status]
+    C -- No --> E[Send Payment Reminder]
+    E --> F{Overdue Payment?}
+    F -- Yes --> G[Apply Late Fee]
+    F -- No --> H[Wait for Payment]
+    G --> I[Confirm Payment Received]
+    H --> I
+    D --> I
+    I --> J[Close Billing Case]
+    J --> K[End]
 ```
+
 ### **3.3 Doctor Consultation Workflow**
 ```mermaid
-activityDiagram-v2
-    start
-    :Patient Arrives for Consultation;
-    :Verify Appointment Details;
-    decision Doctor Available?
-        Doctor Available --> [Yes] :Proceed to Consultation;
-        Doctor Available --> [No] :Reschedule Appointment;
-    :Doctor Diagnoses Patient;
-    :Prescribe Treatment/Medication;
-    :Update Medical Records;
-    stop
+flowchart TD
+    A[Patient Arrives for Consultation] --> B[Verify Appointment Details]
+    B --> C{Doctor Available?}
+    C -- Yes --> D[Proceed to Consultation]
+    C -- No --> E[Reschedule Appointment]
+    D --> F[Doctor Diagnoses Patient]
+    F --> G[Prescribe Treatment/Medication]
+    G --> H[Update Medical Records]
+    H --> I[End]
+    E --> I
 ```
 
+---
+
 ## **4. Conclusion**
-This assessment presents key UML diagrams to illustrate the state transitions and workflows in a Hospital Management System. These diagrams help visualize patient management, appointment scheduling, billing, and consultation processes, ensuring a clear understanding of system operations and improving hospital efficiency.
+This assessment presented essential UML diagrams to depict the dynamic behavior of the Hospital Management System. The state transition and activity diagrams help visualize the system's process flows including patient handling, appointment scheduling, billing, and consultation. These models provide a clear understanding of system functionalities and can guide further system development and refinement.
 
+---
 
-
+**End of Assessment 8**
