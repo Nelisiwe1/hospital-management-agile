@@ -210,8 +210,24 @@ flowchart TD
 ```
 
 ---
+## **4. Reflecion**
+# Reflection on Hospital Management System UML Models
 
-## **4. Conclusion**
+## Granularity Decisions
+In designing the state transition and activity diagrams, I focused on balancing simplicity with enough detail to reflect real-world processes. For example, while the `Patient` state transition could include intermediate stages like “Transferred,” I chose to focus on key lifecycle states to avoid overwhelming complexity.
+
+## Agile Process Alignment
+Linking user stories and functional requirements from previous assignments helped ensure the diagrams were aligned with user expectations. Activity diagrams naturally supported these stories by showing step-by-step interactions (e.g., booking an appointment or generating a medical report).
+
+## Comparison of Diagrams
+- **State diagrams** excel at visualizing the life cycle of individual entities like `Prescription` or `Billing`, especially in systems with conditional paths.
+- **Activity diagrams** were better for illustrating workflows involving multiple roles and steps, such as the discharge process or feedback handling.
+
+## Lessons Learned
+Creating these diagrams improved my understanding of dynamic system modeling. It also showed how visual tools can communicate complex workflows clearly, which is valuable for both developers and stakeholders in Agile teams.
+
+
+## **5. Conclusion**
 This assessment presented essential UML diagrams to depict the dynamic behavior of the Hospital Management System. The state transition and activity diagrams help visualize the system's process flows including patient handling, appointment scheduling, billing, and consultation. These models provide a clear understanding of system functionalities and can guide further system development and refinement.
 
 ---
