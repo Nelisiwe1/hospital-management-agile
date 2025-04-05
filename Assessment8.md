@@ -140,6 +140,74 @@ flowchart TD
     H --> I[End]
     E --> I
 ```
+### **3.4 User Registration Workflow**
+```mermaid
+flowchart TD
+    A[Open Registration Page] --> B[Enter Details]
+    B --> C[Submit Form]
+    C --> D[Send Verification Email]
+    D --> E{Email Verified?}
+    E -- Yes --> F[Activate Account]
+    E -- No --> G[Wait or Resend Email]
+    F --> H[Login Enabled]
+    H --> I[End]
+    G --> I
+
+```
+### **3.5 Discharge Process Workflow**
+```mermaid
+flowchart TD
+    A[Doctor Approves Discharge] --> B[Update Records]
+    B --> C[Prepare Discharge Summary]
+    C --> D[Notify Billing Department]
+    D --> E[Generate Final Bill]
+    E --> F[Collect Payment]
+    F --> G[Patient Leaves Hospital]
+    G --> H[End]
+
+```
+### **3.6 Generate Medical Report Workflow**
+```mermaid
+flowchart TD
+    A[Doctor Requests Report] --> B[Retrieve Patient History]
+    B --> C[Compile Diagnosis Summary]
+    C --> D[Add Lab Results]
+    D --> E[Format Report]
+    E --> F[Review by Senior Doctor]
+    F --> G[Approve and Sign]
+    G --> H[Send to Patient or Print]
+    H --> I[End]
+
+```
+### **3.7 Book Appointment Workflow**
+```mermaid
+flowchart TD
+    A[Login to Patient Portal] --> B[Search for Doctor/Speciality]
+    B --> C[Select Available Slot]
+    C --> D[Enter Symptoms or Reason]
+    D --> E[Confirm Appointment]
+    E --> F[Send Confirmation Email]
+    F --> G[End]
+
+
+```
+### **3.8 Patient Feedback Workflow**
+```mermaid
+flowchart TD
+    A[Submit Feedback Form] --> B[Store in System]
+    B --> C[Send Acknowledgement Email]
+    C --> D{Is it a Complaint?}
+    D -- Yes --> E[Assign to Admin for Review]
+    D -- No --> F[Store for Improvement]
+    E --> G[Resolve & Respond]
+    F --> H[Close Feedback]
+    G --> I[Close Feedback]
+    I --> J[End]
+    H --> J
+
+
+
+```
 
 ---
 
