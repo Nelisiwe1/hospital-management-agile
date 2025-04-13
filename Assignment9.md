@@ -1,8 +1,4 @@
-Perfect, Nelisiwe! For a **Hospital Management System**, here’s a tailored version of the three deliverables you need: **Domain Model**, **Class Diagram**, and **Reflection** (template starter). Let’s start building your Markdown content below.
-
----
-
-## **1. Domain Model (Markdown Table)**
+## **1. Domain Model**
 
 | Entity      | Attributes                                   | Methods                                 | Relationships                                           |
 |-------------|----------------------------------------------|-----------------------------------------|---------------------------------------------------------|
@@ -91,7 +87,7 @@ classDiagram
 
 ---
 
-## **3. Reflection (500+ words – Starter Template)**
+## **3. Reflection **
 
 > **Challenges:**
 While designing the domain model, I found it challenging to balance abstraction with specificity. Identifying the appropriate responsibilities for each class (e.g., should the Doctor generate a bill or should that be part of Appointment?) required careful thought. Modeling relationships with correct multiplicities also posed a challenge, especially in representing the many-to-many interactions like Patients and Doctors via Appointments.
@@ -107,4 +103,3 @@ This assignment taught me the value of clarity and simplicity in design. Object-
 
 ---
 
-Would you like me to generate the complete `.md` file for this assignment or help you commit it to GitHub too?
